@@ -1,0 +1,21 @@
+name: chaleur
+channels:
+  - conda-forge
+dependencies:
+  - matplotlib
+  - sqlalchemy
+  - planetary-computer
+  - python=3.11
+  - pystac-client
+  - openpyxl
+  - geoalchemy2
+  - libpysal
+  - rioxarray
+  - owslib
+  - requests
+  - psycopg2
+  - esda
+  - networkx
+  - scipy
+  - geopandas
+

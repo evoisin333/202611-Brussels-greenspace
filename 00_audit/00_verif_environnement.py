@@ -37,7 +37,7 @@ note(Path(sys.prefix).name == "chaleur", f"environnement actif : {sys.prefix} (a
 print("\n--- Paquets ---")
 paquets = ["geopandas", "rioxarray", "pystac_client", "planetary_computer", "owslib",
            "openpyxl", "requests", "matplotlib", "scipy", "sqlalchemy", "psycopg2",
-           "geoalchemy2", "esda", "libpysal"]
+           "geoalchemy2", "esda", "libpysal", "networkx"]
 for nom in paquets:
     try:
         module = import_module(nom)
