@@ -27,3 +27,11 @@ DATA_TRAVAIL = RACINE / "data" / "travail" / VILLE  # extractions légères, fic
 AUDIT = RACINE / "data" / "travail" / VILLE / "audit"
 RESULTATS = RACINE / "05_resultats"                 # CSV qui font foi
 FIGURES = RACINE / "06_figures"
+
+# --- Espaces verts accessibles : filtre principal (phase 2, étape 2.2) ---
+# Définition « zones de carence » de Bruxelles Environnement : accessible de droit,
+# plus de 50 % de couverture végétale, aménagé pour le public.
+EV_STATUT = ["Public", "Public/privé"]  # « espace à caractère public » (Plan Nature 2016), pas la propriété du sol
+EV_PCT_VEG_MIN = 50                     # couverture strictement supérieure (« plus de 50 % »)
+EV_EAU_COMPTEE = True                   # couverture = pct_veg + pct_water (IBSA, Focus n° 63)
+EV_SOUS_TYPES = ["Bois et forêt", "Espace vert aménagé", "Cimetière", "Abords de voirie"]
