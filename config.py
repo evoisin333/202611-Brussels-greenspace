@@ -14,9 +14,7 @@ VILLE = "bruxelles"
 # Volontairement plus large que la Région (marge de quelques km) :
 # la limite exacte viendra de la couche régionale (audit, étape 1.7).
 EMPRISE_WGS84 = (4.20, 50.74, 4.52, 50.94)
-
-# CRS de calcul : à trancher en phase 2 (EPSG:31370 Lambert 72 ou EPSG:3812 Lambert 2008)
-CRS_CALCUL = None
+CRS_CALCUL = "EPSG:31370"   # Lambert 72 : CRS de calcul des vecteurs (phase 2, étape 2.1)
 
 # --- Période ---
 ANNEES = list(range(2020, 2026))        # analyse : 2020 à 2025 inclus
