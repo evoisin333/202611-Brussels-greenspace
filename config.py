@@ -35,3 +35,8 @@ EV_STATUT = ["Public", "Public/privé"]  # « espace à caractère public » (Pl
 EV_PCT_VEG_MIN = 50                     # couverture strictement supérieure (« plus de 50 % »)
 EV_EAU_COMPTEE = True                   # couverture = pct_veg + pct_water (IBSA, Focus n° 63)
 EV_SOUS_TYPES = ["Bois et forêt", "Espace vert aménagé", "Cimetière", "Abords de voirie"]
+
+# --- Réseau piéton (phase 2, étape 2.3) ---
+SEUIL_ENTREE_DIFFUSE_M = 10   # entrée diffuse : voie à moins de 10 m d'un espace vert sans entrée ponctuelle
+ENTREE_PENETRATION_M = 5      # entrée ponctuelle : la voie atteint l'intérieur de l'espace rétréci de 5 m
+EV_FERMES_PGS_ID = ["11006"]   # bois du CERIA (Anderlecht) : fermé, vérifié sur Street View le 24/11/2026
