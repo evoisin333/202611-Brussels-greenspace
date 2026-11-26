@@ -40,3 +40,6 @@ EV_SOUS_TYPES = ["Bois et forêt", "Espace vert aménagé", "Cimetière", "Abord
 SEUIL_ENTREE_DIFFUSE_M = 10   # entrée diffuse : voie à moins de 10 m d'un espace vert sans entrée ponctuelle
 ENTREE_PENETRATION_M = 5      # entrée ponctuelle : la voie atteint l'intérieur de l'espace rétréci de 5 m
 EV_FERMES_PGS_ID = ["11006"]   # bois du CERIA (Anderlecht) : fermé, vérifié sur Street View le 24/11/2026
+
+# --- Population (phase 2, étape 2.4) ---
+SEUIL_POP_SECTEUR = 50        # secteurs de moins de 50 hab. exclus des statistiques (gardés dans les totaux)
