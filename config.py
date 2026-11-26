@@ -51,3 +51,11 @@ DIST_GRAND_EV_M = 400         # accès si un grand espace est à <= 400 m à pie
 ACCROCHE_COMPTEE = True       # la distance porte -> voie la plus proche est ajoutée au trajet (pas de plafond)
 VALIDATION_BE = {"carence": 0.22, "sans_grand_400m": 0.42}   # Bruxelles Environnement, données 2023
 TOLERANCE_VALIDATION = 0.05   # ± 5 points : validé ; 5-10 : écart à expliquer ; > 10 : bloquant
+
+# --- Chaleur (phase 2, étape 2.6) : fixé le 26/11/2026, avant toute lecture de température ---
+SEUIL_PASSAGE_CLAIR = 0.90    # passages retenus : >= 90 % de la Région claire (pct_claire_T1, audit 04) -> 24
+LST_REFERENCE = "mediane"     # LST relative = LST du pixel - médiane régionale des pixels clairs hors eau, par passage
+MIN_PIXELS_SECTEUR = 20       # pixels clairs (centre dans le secteur, hors eau) requis par passage
+MIN_PASSAGES_SECTEUR = 12     # passages valides requis (sur 24) ; sinon LST manquante
+VARIANTE_CDIST_KM = 1.0       # variante README : pixels à moins de 1 km d'un nuage exclus
+VARIANTE_STQA_K = 4.0         # variante README : pixels d'incertitude > 4 K exclus
