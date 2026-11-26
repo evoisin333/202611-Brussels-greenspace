@@ -59,3 +59,18 @@ MIN_PIXELS_SECTEUR = 20       # pixels clairs (centre dans le secteur, hors eau)
 MIN_PASSAGES_SECTEUR = 12     # passages valides requis (sur 24) ; sinon LST manquante
 VARIANTE_CDIST_KM = 1.0       # variante README : pixels à moins de 1 km d'un nuage exclus
 VARIANTE_STQA_K = 4.0         # variante README : pixels d'incertitude > 4 K exclus
+
+# --- Statistiques (phase 2, étape 2.7) : fixé le 26/11/2026, avant tout résultat ---
+TESTS = {                                   # liste fermée, secteurs >= 50 hab. avec LST valide
+    "T1": ("lst_rel", "ndvi"),
+    "T2": ("lst_rel", "part_carence"),
+    "T3": ("ndvi", "part_carence"),
+}
+CORRELATION = "spearman"                    # sur les rangs
+TEST_SIGNIFICATIVITE = "t_modifie"          # Clifford, Richardson & Hémon 1989 ; Dutilleul 1993 (taille effective)
+ALPHA = 0.05                                # correction de Holm sur les 3 tests
+MORAN_PERMUTATIONS = 999                    # indice de Moran : diagnostic seulement (voisins par contiguïté)
+TERCILES_LST_PONDERES = True                # terciles de LST relative pondérés par la population
+SEUILS_CARENCE = (1 / 3, 2 / 3)             # accès bon < 1/3 <= intermédiaire < 2/3 <= faible
+SEUIL_ROBUSTESSE_DOUBLE_PEINE = 0.70        # part des habitants en double peine conservée par une variante
+SEUIL_SPEARMAN_VARIANTES_LST = 0.90         # stabilité de la LST des secteurs entre variantes
