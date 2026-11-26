@@ -43,3 +43,11 @@ EV_FERMES_PGS_ID = ["11006"]   # bois du CERIA (Anderlecht) : fermé, vérifié 
 
 # --- Population (phase 2, étape 2.4) ---
 SEUIL_POP_SECTEUR = 50        # secteurs de moins de 50 hab. exclus des statistiques (gardés dans les totaux)
+
+# --- Indicateur d'accès (phase 2, étape 2.5) : fixé le 26/11/2026, avant tout calcul de distance ---
+SEUIL_GRAND_EV_HA = 1         # espace « grand » si surface >= 1 ha (sinon « petit »)
+DIST_PETIT_EV_M = 200         # accès si un petit espace est à <= 200 m à pied (entrée la plus proche)
+DIST_GRAND_EV_M = 400         # accès si un grand espace est à <= 400 m à pied
+ACCROCHE_COMPTEE = True       # la distance porte -> voie la plus proche est ajoutée au trajet (pas de plafond)
+VALIDATION_BE = {"carence": 0.22, "sans_grand_400m": 0.42}   # Bruxelles Environnement, données 2023
+TOLERANCE_VALIDATION = 0.05   # ± 5 points : validé ; 5-10 : écart à expliquer ; > 10 : bloquant
